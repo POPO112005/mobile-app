@@ -18,7 +18,7 @@ export default function ProfileScreen() {
           {/* Header */}
           <View style={styles.headerCard}>
             <View style={styles.headerTop}>
-              <Image source={require('https://images.unsplash.com/photo-1718468578870-1aff69068150?q=80&w=389&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')} style={styles.avatar} />
+              <Image source={{ uri: 'https://images.unsplash.com/photo-1718468578870-1aff69068150?q=80&w=389&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' }} style={styles.avatar} />
               <View style={{ flex: 1 }}>
                 <View style={styles.nameRow}>
                   <ThemedText type="title">เอบี</ThemedText>
