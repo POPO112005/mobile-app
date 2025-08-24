@@ -1,50 +1,74 @@
-# Welcome to your Expo app 👋
+## โครงการ: Mobile App (Expo + React Native)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+แอปพลิเคชันมือถือแบบ Cross‑platform พัฒนาด้วย React Native และ Expo Router โครงสร้างเส้นทางเป็นแบบไฟล์ (file‑based routing) รองรับ Android, iOS และ Web ภายในโปรเจกต์มีตัวอย่างหน้าใช้งานหลัก 4 แท็บ ได้แก่ Home, Explore, Game และ Profile พร้อมคอมโพเนนต์ UI ที่รีใช้ซ้ำได้และระบบธีมแบบ Light/Dark
 
-## Get started
+### คุณสมบัติหลัก
+- **Expo Router**: จัดการเส้นทางด้วยโครงสร้างไดเรกทอรี `app/` อย่างเป็นระบบ
+- **แท็บหลัก 4 หน้า**: `Home`, `Explore`, `Game`, `Profile` พร้อมโค้ดตัวอย่างที่แยกส่วนชัดเจน
+- **ธีมมืด/สว่าง**: ใช้ `ThemedText`, `ThemedView`, และ `useColorScheme` เพื่อเปลี่ยนธีมอัตโนมัติ
+- **คอมโพเนนต์พร้อมใช้**: เช่น `Collapsible`, `ParallaxScrollView`, และ `HapticTab`
+- **โครงสร้างชัดเจน**: จัดไฟล์แยกส่วน `components/`, `hooks/`, `constants/` ช่วยให้ดูแลรักษาง่าย
 
-1. Install dependencies
+### เทคโนโลยีที่ใช้
+- React 19, React Native 0.79
+- Expo SDK 53, Expo Router 5
+- React Navigation, Reanimated, Gesture Handler, Safe Area Context, Screens
 
-   ```bash
-   npm install
-   ```
-
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+### โครงสร้างโปรเจกต์โดยสรุป
+```text
+mobile-app/
+  app/
+    _layout.tsx
+    (tabs)/
+      _layout.tsx
+      index.tsx       # Home
+      explore.tsx     # Explore
+      game.tsx        # Game
+      profile.tsx     # Profile
+    +not-found.tsx
+  components/
+    ui/               # สัญลักษณ์/พื้นหลังแท็บ
+    *.tsx             # คอมโพเนนต์ที่รีใช้ซ้ำได้
+  hooks/              # โฮกธีม/ยูทิลิตี้
+  constants/          # สี และค่าคงที่ต่าง ๆ
+  assets/             # ฟอนต์/ภาพ
+  package.json
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+### เริ่มต้นใช้งาน
+1) ติดตั้งไลบรารี
+```bash
+npm install
+```
 
-## Learn more
+2) เริ่มรันแอป
+```bash
+npx expo start
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+เมื่อรันแล้ว คุณสามารถเลือกเปิดแอปได้ผ่าน:
+- Development build
+- Android Emulator
+- iOS Simulator
+- หรือแอป Expo Go
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+ไฟล์ทั้งหมดสำหรับเริ่มพัฒนาจะอยู่ในไดเรกทอรี `app/` และโปรเจกต์นี้ใช้ [file‑based routing](https://docs.expo.dev/router/introduction).
 
-## Join the community
+### สคริปต์ที่ใช้บ่อย
+- `npm run android` เปิดบน Android Emulator
+- `npm run ios` เปิดบน iOS Simulator (macOS)
+- `npm run web` เปิดบนเว็บ
+- `npm run reset-project` สร้างโครงใหม่แบบว่าง โดยย้ายโค้ดตัวอย่างไปที่ `app-example/`
 
-Join our community of developers creating universal apps.
+### ธีมและสไตล์
+- ค่าธีมหลักอยู่ใน `constants/Colors.ts`
+- ฮุค `useColorScheme` และคอมโพเนนต์ `ThemedText`/`ThemedView` ใช้สำหรับซิงก์ธีม
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### แหล่งข้อมูลแนะนำ
+- เอกสาร Expo: [https://docs.expo.dev](https://docs.expo.dev)
+- บทเรียนเริ่มต้น Expo: [https://docs.expo.dev/tutorial/introduction/](https://docs.expo.dev/tutorial/introduction/)
+- Expo บน GitHub: [https://github.com/expo/expo](https://github.com/expo/expo)
+- ชุมชน Discord: [https://chat.expo.dev](https://chat.expo.dev)
+
+---
+ปรับแต่งและขยายหน้าต่าง ๆ ได้ตามต้องการ โดยยึดโครงสร้างไฟล์ใน `app/(tabs)/` เพื่อคงความเป็นระบบในระยะยาว
