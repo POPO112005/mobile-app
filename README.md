@@ -1,6 +1,6 @@
 ## โครงการ: Mobile App (Expo + React Native)
 
-แอปพลิเคชันมือถือแบบ Cross‑platform พัฒนาด้วย React Native และ Expo Router โครงสร้างเส้นทางเป็นแบบไฟล์ (file‑based routing) รองรับ Android, iOS และ Web ภายในโปรเจกต์มีตัวอย่างหน้าใช้งานหลัก 4 แท็บ ได้แก่ Home, Explore, Game และ Profile พร้อมคอมโพเนนต์ UI ที่รีใช้ซ้ำได้และระบบธีมแบบ Light/Dark
+แอปพลิเคชันมือถือแบบ Cross‑platform สำหรับหางานของ Pre-aging 50-59 ปี นี่เป็นเพียง UI เท่านั้น และเราจะพัฒนาให้เป็น Prototype แบบสมบูรณ์
 
 ### คุณสมบัติหลัก
 - **Expo Router**: จัดการเส้นทางด้วยโครงสร้างไดเรกทอรี `app/` อย่างเป็นระบบ
@@ -70,5 +70,4 @@ npx expo start
 - Expo บน GitHub: [https://github.com/expo/expo](https://github.com/expo/expo)
 - ชุมชน Discord: [https://chat.expo.dev](https://chat.expo.dev)
 
----
-ปรับแต่งและขยายหน้าต่าง ๆ ได้ตามต้องการ โดยยึดโครงสร้างไฟล์ใน `app/(tabs)/` เพื่อคงความเป็นระบบในระยะยาว
+
