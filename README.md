@@ -1,20 +1,20 @@
-## โครงการ: Mobile App (Expo + React Native)
+## Project: Mobile App (Expo + React Native)
 
-แอปพลิเคชันมือถือแบบ Cross‑platform สำหรับหางานของ Pre-aging 50-59 ปี นี่เป็นเพียง UI เท่านั้น และเราจะพัฒนาให้เป็น Prototype แบบสมบูรณ์
+A cross‑platform mobile application for job searching aimed at pre-aging users (50-59 years old). This is currently UI only and will be developed into a complete prototype.
 
-### คุณสมบัติหลัก
-- **Expo Router**: จัดการเส้นทางด้วยโครงสร้างไดเรกทอรี `app/` อย่างเป็นระบบ
-- **แท็บหลัก 4 หน้า**: `Home`, `Explore`, `Game`, `Profile` พร้อมโค้ดตัวอย่างที่แยกส่วนชัดเจน
-- **ธีมมืด/สว่าง**: ใช้ `ThemedText`, `ThemedView`, และ `useColorScheme` เพื่อเปลี่ยนธีมอัตโนมัติ
-- **คอมโพเนนต์พร้อมใช้**: เช่น `Collapsible`, `ParallaxScrollView`, และ `HapticTab`
-- **โครงสร้างชัดเจน**: จัดไฟล์แยกส่วน `components/`, `hooks/`, `constants/` ช่วยให้ดูแลรักษาง่าย
+### Main Features
+- **Expo Router**: Route management using a structured `app/` directory
+- **4 Main Tabs**: `Home`, `Explore`, `Game`, `Profile` with clear, modular example code
+- **Dark/Light Theme**: Uses `ThemedText`, `ThemedView`, and `useColorScheme` for automatic theme switching
+- **Reusable Components**: Such as `Collapsible`, `ParallaxScrollView`, and `HapticTab`
+- **Clear Structure**: Separated files in `components/`, `hooks/`, `constants/` for easy maintenance
 
-### เทคโนโลยีที่ใช้
+### Technologies Used
 - React 19, React Native 0.79
 - Expo SDK 53, Expo Router 5
 - React Navigation, Reanimated, Gesture Handler, Safe Area Context, Screens
 
-### โครงสร้างโปรเจกต์โดยสรุป
+### Project Structure Overview
 ```text
 mobile-app/
   app/
@@ -27,47 +27,47 @@ mobile-app/
       profile.tsx     # Profile
     +not-found.tsx
   components/
-    ui/               # สัญลักษณ์/พื้นหลังแท็บ
-    *.tsx             # คอมโพเนนต์ที่รีใช้ซ้ำได้
-  hooks/              # โฮกธีม/ยูทิลิตี้
-  constants/          # สี และค่าคงที่ต่าง ๆ
-  assets/             # ฟอนต์/ภาพ
+    ui/               # Tab icons/backgrounds
+    *.tsx             # Reusable components
+  hooks/              # Theme/util hooks
+  constants/          # Colors and other constants
+  assets/             # Fonts/images
   package.json
 ```
 
-### เริ่มต้นใช้งาน
-1) ติดตั้งไลบรารี
+### Getting Started
+1) Install dependencies
 ```bash
 npm install
 ```
 
-2) เริ่มรันแอป
+2) Start the app
 ```bash
 npx expo start
 ```
 
-เมื่อรันแล้ว คุณสามารถเลือกเปิดแอปได้ผ่าน:
+Once running, you can open the app via:
 - Development build
 - Android Emulator
 - iOS Simulator
-- หรือแอป Expo Go
+- or the Expo Go app
 
-ไฟล์ทั้งหมดสำหรับเริ่มพัฒนาจะอยู่ในไดเรกทอรี `app/` และโปรเจกต์นี้ใช้ [file‑based routing](https://docs.expo.dev/router/introduction).
+All development files are in the `app/` directory, and this project uses [file‑based routing](https://docs.expo.dev/router/introduction).
 
-### สคริปต์ที่ใช้บ่อย
-- `npm run android` เปิดบน Android Emulator
-- `npm run ios` เปิดบน iOS Simulator (macOS)
-- `npm run web` เปิดบนเว็บ
-- `npm run reset-project` สร้างโครงใหม่แบบว่าง โดยย้ายโค้ดตัวอย่างไปที่ `app-example/`
+### Common Scripts
+- `npm run android` Open on Android Emulator
+- `npm run ios` Open on iOS Simulator (macOS)
+- `npm run web` Open on web
+- `npm run reset-project` Create a new blank project, moving example code to `app-example/`
 
-### ธีมและสไตล์
-- ค่าธีมหลักอยู่ใน `constants/Colors.ts`
-- ฮุค `useColorScheme` และคอมโพเนนต์ `ThemedText`/`ThemedView` ใช้สำหรับซิงก์ธีม
+### Theme & Styling
+- Main theme values are in `constants/Colors.ts`
+- The `useColorScheme` hook and `ThemedText`/`ThemedView` components are used for theme syncing
 
-### แหล่งข้อมูลแนะนำ
-- เอกสาร Expo: [https://docs.expo.dev](https://docs.expo.dev)
-- บทเรียนเริ่มต้น Expo: [https://docs.expo.dev/tutorial/introduction/](https://docs.expo.dev/tutorial/introduction/)
-- Expo บน GitHub: [https://github.com/expo/expo](https://github.com/expo/expo)
-- ชุมชน Discord: [https://chat.expo.dev](https://chat.expo.dev)
+### Recommended Resources
+- Expo Docs: [https://docs.expo.dev](https://docs.expo.dev)
+- Expo Getting Started Tutorial: [https://docs.expo.dev/tutorial/introduction/](https://docs.expo.dev/tutorial/introduction/)
+- Expo on GitHub: [https://github.com/expo/expo](https://github.com/expo/expo)
+- Discord Community: [https://chat.expo.dev](https://chat.expo.dev)
 
 
